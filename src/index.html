@@ -1,0 +1,20 @@
+<html>
+<head></head>
+<script>
+const call = (body) => {
+  return fetch('/api', {
+    method: 'post',
+    body: JSON.stringify({body})
+  })
+};
+
+(async () => {
+  await call('first')
+  await call('second')
+  await call('third')
+})();
+</script>
+<body>
+
+</body>
+</html>
